@@ -1,0 +1,17 @@
+How to use CNVnator scripts: 
+
+1. Replace . /u/local/Modules...modules.sh with the path to the local installation of cern root or where you are able
+  to access the cern_root module 
+
+2. Replace module load cern_root with whichever command loads cern_root 
+
+3. Specifiying variables; 
+- used_bamfile is the BAM file used in processing
+- There is no need to change binsize or name unless you want to manually input another name for output files that is not 
+  determined by the name of the BAM file 
+- CNVnatorPrefix specifies the install location of CNVnator, make sure to specify where the src folder is 
+- work_dir is the output directory path 
+- rootfile is the root file created during the algorithm running, no need to change unless you want a different name 
+- hg10 is the reference genome file for human genome 19
+
+4. Converting CNVnator data to VCF is still a work in progress, but you want to run cnvnator2VCF.pl which is also in the scripts folder in order to do so as CNVNator generates a text call file. 
