@@ -1,0 +1,12 @@
+Script Usage Instructions: 
+
+LUMPY has many funtionalities, but for now the most optimised scripts are for variant detection: 
+
+You will need to specify several variables and paths in lumpy_variants_HZ_4-23-18.sh 
+1. BAMs_to_PROCESS specifies the BAM location which you will use 
+2. number_bam specifies how many bams are being processed 
+3. lumpy_folder is the folder name which you want to name your outdirectory
+4. scratch is the location of where you want to put your output folder, for HOFFMAN2 the scratch folder would be the best place to put it 
+5. After loading the relevant modules needed, you will need to specify the location of extract_sv_reads if you want to pursue this option, just change the path of /u/home/l/lukezhan... to your own. 
+6. Replace /u/home/l/lukezhan/lumpy...pairend_distro.py with your own path to the pairend_distro.py file in your LUMPY install folder. 
+7. reaplce /u/home/l/lukezhan.../lumpy with the directory where you have installed LUMPY 
