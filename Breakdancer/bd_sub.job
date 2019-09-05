@@ -1,0 +1,14 @@
+#!/bin/bash
+#$ -V
+#$ -S /bin/bash
+#$ -N breakdancer_mayo_350
+#$ -cwd
+#$ -o /u/home/l/lukezhan/joblogs
+#$ -j y
+#$ -m a
+#$ -M zhanglucasjifeng@gmail.com
+#$ -l h_data=5G,h_rt=20:00:00
+
+input=/u/nobackup/eeskin2/adityago/orginal_bam/LP6005322-DNA_B04.bam
+
+./breakdancer.sh $input /u/scratch/l/lukezhan/breakdanceroutput/outputs
