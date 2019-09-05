@@ -13,3 +13,8 @@ Running breakdancer does not require reference genome, and the process consists 
 Please note: 
 
 Step 1 relies on the script bam2cfg.pl in perl folder of breakdancer. If initial running reports error that Statistics or GD::Graph module was not installed, install perl5 that contains the module and go to bam2cfg.pl to specify the location of the module (use lib location_of_the_module). This should at least solve the Statistics module problem. If GD::Graph module still not work, comment out the line requiring the module (#use GD::Graph::histogram;), as it is not necessary in structure variance calling.
+
+Instructions for the UCLA Hoffman2 System: 
+
+1. in Breakdancer.sh you need to change the dir path to the location specifying where you installed breakdancer 
+2. Submit the bd_sub.job file as a qsub and specify the input path for BAM files which need processing in inputs, and change /u/scratch/l/lukezhan... to the outdirectory path to store finished vcf files. 
