@@ -10,3 +10,14 @@ Please note:
 
   1. bcftools module is not available on Orion cluster so it has to be manually installed.
   2. The vcf file converted from bcf file is pretty big because delly generates lots of low quality calling. However, FusorSV will ignore those low quality calling so we do not have to do anything about it. 
+
+Script Usage: 
+
+1. In delly_sub.job specify the provided variables: 
+- input is the input BAM location/path
+- outdir is the output directory path
+- reference is the reference genome path 
+
+2. In delly.sh you will need to specify the dir variable, which is where the directory where delly is installed. It is advised to use the binary linked file in Delly releases directly. 
+
+3. In delly.sh you will also need to load bcftools, if on hoffman2 this scripts should load it with no issues but if you are using another system you will need to load bcftools accordingly. 
