@@ -10,12 +10,12 @@
 #$ -l h_data=5G,h_rt=20:00:00
 
 index=${SGE_TASK_ID}p
-input=/u/nobackup/eeskin2/adityago/orginal_bam/LP6005322-DNA_B04.bam
+input=/u/nobackup/eeskin2/adityago/orginal_bam/LP6005322-DNA_C06.bam
 outdir=/u/scratch/l/lukezhan/breakseqout/testing
 bwa=/u/local/apps/bwa/current/bwa
 samtools=/u/local/apps/samtools/current/samtools
-bplib=/u/home/l/lukezhan/breakseq2_bplib_20150129/breakseq2_bplib_20150129.fna
-reference=/u/nobackup/eeskin2/jhsul/share/forLuke/jsul/GRCh38_full_analysis_set_plus_decoy_hla.fa 
+bplib=/u/home/l/lukezhan/SVPipeline/Breakseq/breakseq2_bplib_20150129.hg19/breakseq2_bplib_20150129.hg19.fna
+reference=/u/nobackup/eeskin2/adityago/luke_data/ref_genome/hg19/hg19.fa
 
 # Needs to provide reference genome
 ./breakseq2.sh ${input} ${outdir} ${reference} ${bwa} ${samtools} ${bplib}

@@ -9,7 +9,7 @@
 #$ -M zhanglucasjifeng@gmail.com
 #$ -l h_data=15G,h_rt=20:00:00
 
-input=/u/nobackup/eeskin2/adityago/orginal_bam/LP6005322-DNA_B04.bam
+input=/u/nobackup/eeskin2/adityago/orginal_bam/LP6005322-DNA_C06.bam
 outdir=/u/scratch/l/lukezhan/dellyout
 reference=/u/nobackup/eeskin2/jhsul/share/forLuke/jsul/GRCh38_full_analysis_set_plus_decoy_hla.fa
 
