@@ -1,0 +1,91 @@
+
+R version 3.6.0 (2019-04-26) -- "Planting of a Tree"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+During startup - Warning message:
+Setting LC_CTYPE failed, using "C" 
+> #!/usr/bin/env Rscript
+> 
+> library(cn.mops)
+Loading required package: parallel
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:parallel':
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: 'S4Vectors'
+
+The following object is masked from 'package:base':
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+
+Attaching package: 'cn.mops'
+
+The following object is masked from 'package:S4Vectors':
+
+    params
+
+> Pathtobam = "/u/home/l/lukezhan/data_master/original_data/LP/"
+> setwd(Pathtobam)
+> BAMFiles <- list.files(path=Pathtobam,pattern=".bam$")
+> bamDataRanges <- getReadCountsFromBAM(BAMFiles)
+Identified the following reference sequences:  chrM,chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX,chrY
+Missing "refSeqNames"! Selecting all identified reference sequence for analysis.
+
+ PLEASE BE PATIENT... this might take a while. Consider using the parallel version of this function
+
+There were 12 warnings (use warnings() to see them)
+> res <- cn.mops(bamDataRanges)
+Normalizing...
+Error in normalizeChromosomes(X, chr = chr, normType = normType, qu = normQu,  : 
+  Zero columns in readcount matrix.
+Calls: cn.mops -> normalizeChromosomes
+In addition: Warning message:
+In valid.GenomicRanges.seqinfo(x, suggest.trim = TRUE) :
+  GRanges object contains 1 out-of-bound range located on sequence chrM.
+  Note that ranges located on a sequence whose length is unknown (NA) or
+  on a circular sequence are not considered out-of-bound (use
+  seqlengths() and isCircular() to get the lengths and circularity flags
+  of the underlying sequences). You can use trim() to trim these ranges.
+  See ?`trim,GenomicRanges-method` for more information.
+Execution halted

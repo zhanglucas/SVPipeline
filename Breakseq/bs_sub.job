@@ -10,7 +10,7 @@
 #$ -l h_data=5G,h_rt=20:00:00
 
 index=${SGE_TASK_ID}p
-input=/u/nobackup/eeskin2/adityago/orginal_bam/LP6005322-DNA_C06.bam
+input=/u/home/l/lukezhan/data_master/LP6005322-DNA_C06.merged.sorted.chrI_raw.dedup-region_0264.bam
 outdir=/u/scratch/l/lukezhan/breakseqout/testing
 bwa=/u/local/apps/bwa/current/bwa
 samtools=/u/local/apps/samtools/current/samtools

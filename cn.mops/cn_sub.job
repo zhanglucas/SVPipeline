@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -V
 #$ -S /bin/bash
-#$ -N delly
+#$ -N cnmops
 #$ -cwd
 #$ -o /u/home/l/lukezhan/joblogs
 #$ -j y
@@ -10,8 +10,10 @@
 #$ -l h_data=4G,h_rt=20:00:00
 
 input=/u/home/l/lukezhan/data_master/LP6005322-DNA_C06.merged.sorted.chrI_raw.dedup-region_0264.bam
-outdir=/u/scratch/l/lukezhan/dellyout
+outdir=/u/scratch/l/lukezhan/cnmopsout
 reference=/u/nobackup/eeskin2/adityago/luke_data/ref_genome/hg19/hg19.fa
 
-# Needs to provide reference genome
-bash delly.sh ${input} ${outdir} ${reference}
+. /u/local/Modules/default/init/modules.sh
+module load R/3.6.0
+R CMD BATCH cnmops.R
+

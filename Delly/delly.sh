@@ -26,7 +26,7 @@ res1=$(date +%s.%N)
 
 # Name the output files
 
-bcf=${outdir}/${filename}.bcf
+bcf=${outdir}/LP600.bcf
 vcf=${outdir}/${filename}.vcf
 
 # SV calling
