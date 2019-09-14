@@ -1,0 +1,15 @@
+#!/bin/bash
+#$ -V
+#$ -S /bin/bash
+#$ -N SVPreprocess
+#$ -cwd
+#$ -o /u/home/l/lukezhan/joblogs/GPreprocess 
+#$ -j y  
+#$ -m a 
+#$ -l h_data=20G,h_rt=48:00:00,highp
+
+
+
+
+bash preprocess_HZ_large.sh batch.list
+
