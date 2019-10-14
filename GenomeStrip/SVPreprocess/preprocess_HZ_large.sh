@@ -13,7 +13,7 @@ module load samtools
 
 # SV_DIR is the installation directory for SVToolkit - it must be an exported environment variable.
 # runDir is where all the output files go
-export SV_DIR="/u/home/l/lukezhan/svtoolkit"
+export SV_DIR="/u/home/l/lukezhan/svtoolkit/"
 runDir=/u/scratch/l/lukezhan/genomeout/$out_root
 
 # SV_TMPDIR is a directory for writing temp files, which may be large if you have a large data set. Here the SV_TMPDIR is set in the run directory
@@ -47,18 +47,15 @@ java -cp ${classpath} ${mx} \
     -S ${SV_DIR}/qscript/SVPreprocess.q \
     -S ${SV_DIR}/qscript/SVQScript.q \
     -gatk ${SV_DIR}/lib/gatk/GenomeAnalysisTK.jar \
-    --disableJobReport \
     -cp ${classpath} \
     -configFile ${SV_DIR}/conf/genstrip_parameters.txt \
     -tempDir ${SV_TMPDIR} \
-    -R /u/home/a/alden/eeskin2/bipolar_sv/svtoolkit/reference/Homo_sapiens_assembly19.fasta \
-    -copyNumberMaskFile /u/home/a/alden/eeskin2/bipolar_sv/svtoolkit/reference/Homo_sapiens_assembly19.gcmask.fasta \
-    -genomeMaskFile /u/home/a/alden/eeskin2/bipolar_sv/svtoolkit/reference/Homo_sapiens_assembly19.svmask.fasta \
+    -R /u/nobackup/eeskin2/jhsul/share/forLuke/jsul/GRCh38_full_analysis_set_plus_decoy_hla.fa \
     -runDirectory ${runDir} \
     -md ${runDir}/metadata \
     -disableGATKTraversal \
     -useMultiStep \
-    -reduceInsertSizeDistributions true \
+    -reduceInsertSizeDistributions false \
     -computeGCProfiles true \
     -computeReadCounts true \
     -jobLogDir ${runDir}/logs \

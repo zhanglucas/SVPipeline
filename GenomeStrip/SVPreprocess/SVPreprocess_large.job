@@ -11,5 +11,5 @@
 
 
 
-bash preprocess_HZ_large.sh batch.list
+bash preprocess_HZ_large.sh /u/home/l/lukezhan/SVPipeline/GenomeStrip/SVPreprocess/batch.list
 
