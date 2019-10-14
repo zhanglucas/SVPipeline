@@ -1,0 +1,22 @@
+#!/bin/bash
+#$ -V
+#$ -S /bin/bash
+#$ -N FusorSV
+#$ -cwd
+#$ -o /u/home/l/lukezhan/joblogs
+#$ -j y
+#$ -m a
+#$ -M zhanglucasjifeng@gmail.com
+#$ -l h_data=48G,h_rt=20:00:00
+
+. /u/local/Modules/default/init/modules.sh
+module load python/2.7.13 
+
+python /u/home/l/lukezhan/SVPipeline/FusorSV/FusorSV/FusorSV.py \
+ -L DEFAULT \
+ -r /u/home/l/lukezhan/data_master/ref_genome/grch37/human_g1k_v37.fasta \
+ -i /u/home/l/lukezhan/meta_caller_RC1/ \
+ -p 4 \
+ -o /u/scratch/l/lukezhan/FusorOut \
+ -z /u/home/l/lukezhan/FusorSV/data/human_g1k_v37_decoy_coordinates.json \
+ 

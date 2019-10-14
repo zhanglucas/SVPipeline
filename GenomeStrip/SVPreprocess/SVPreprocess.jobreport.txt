@@ -1,0 +1,21 @@
+#:GATKReport.v1.1:2
+#:GATKTable:10:11:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:;
+#:GATKTable:CommandLineGATK:Job logs for CommandLineGATK
+jobName             exechosts  startTime         formattedStartTime     analysisName     iteration  intermediate  formattedDoneTime      runtime     doneTime        
+SVPreprocess-9_49   unknown    1568743747868000  81-07-05 1:11:08:000   CommandLineGATK          1  false         81-07-31 2:48:19:000   2252231000  1568746000099000
+SVPreprocess-12_50  unknown    1568743764570000  81-07-05 5:49:30:000   CommandLineGATK          1  false         81-08-02 22:01:13:000  2477503000  1568746242073000
+SVPreprocess-16_51  unknown    1568743793549000  81-07-05 13:52:29:000  CommandLineGATK          1  false         81-07-28 0:50:57:000   1940308000  1568745733857000
+SVPreprocess-13_52  unknown    1568743764915000  81-07-05 5:55:15:000   CommandLineGATK          1  false         81-08-08 1:49:51:000   2922876000  1568746687791000
+SVPreprocess-10_53  unknown    1568743747869000  81-07-05 1:11:09:000   CommandLineGATK          1  false         81-08-07 9:00:00:000   2879331000  1568746627200000
+SVPreprocess-15_54  unknown    1568743779298000  81-07-05 9:54:58:000   CommandLineGATK          1  false         81-08-10 10:56:46:000  3114108000  1568746893406000
+SVPreprocess-7_56   unknown    1568743747878000  81-07-05 1:11:18:000   CommandLineGATK          1  false         81-08-05 22:28:23:000  2755025000  1568746502903000
+SVPreprocess-8_57   unknown    1568743747877000  81-07-05 1:11:17:000   CommandLineGATK          1  false         81-07-31 1:13:41:000   2246544000  1568745994421000
+SVPreprocess-14_58  unknown    1568743777794000  81-07-05 9:29:54:000   CommandLineGATK          1  false         81-08-08 7:10:00:000   2929206000  1568746707000000
+SVPreprocess-11_59  unknown    1568743761798000  81-07-05 5:03:18:000   CommandLineGATK          1  false         81-07-30 23:16:31:000  2225593000  1568745987391000
+SVPreprocess-17_60  unknown    1568743794122000  81-07-05 14:02:02:000  CommandLineGATK          1  false         81-07-05 15:22:12:000     4810000  1568743798932000
+
+#:GATKTable:10:1:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:;
+#:GATKTable:_function_:Job logs for _function_
+jobName            exechosts  startTime         formattedStartTime    analysisName  iteration  intermediate  formattedDoneTime      runtime    doneTime        
+SVPreprocess-6_55  unknown    1568743746437000  81-07-05 0:47:17:000  _function_            1  false         81-07-09 13:58:36:000  393079000  1568744139516000
+
