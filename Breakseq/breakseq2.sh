@@ -35,7 +35,7 @@ vcf=${outdir}/${filename}/${filename}.vcf
 # python is required
 # Have to specify the location of bwa and samtools
 # breakpoint library for specific reference genome is required
-python $dir/scripts/run_breakseq2.py --reference $reference --bams $input --work $work --bwa $bwa --samtools $samtools --bplib $bplib --sample LP6005322  
+python $dir/scripts/run_breakseq2.py --reference $reference --bams $input --work $work --bwa $bwa --samtools $samtools --bplib_gff $bplib 
 # bplibs
 # For hg 37 it should be
 # --bplib /home/jluo/breakseq2_bplib_20150129.hg37/breakseq2_bplib_20150129.fna

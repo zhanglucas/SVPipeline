@@ -8,7 +8,8 @@
 #$ -m a
 #$ -M zhanglucasjifeng@gmail.com
 #$ -l h_data=5G,h_rt=20:00:00
-
-input=/u/nobackup/eeskin2/adityago/orginal_bam/LP6005322-DNA_B04.bam
+. /u/home/l/lukezhan/SVPipeline/inputs.config
+echo "$input_single" "$reference" 
+input=$input_single
 
 ./breakdancer.sh $input /u/scratch/l/lukezhan/breakdanceroutput/outputs

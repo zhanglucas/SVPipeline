@@ -7,15 +7,15 @@
 #$ -j y
 #$ -m a
 #$ -M zhanglucasjifeng@gmail.com
-#$ -l h_data=5G,h_rt=20:00:00
-
-index=${SGE_TASK_ID}p
-input=/u/home/l/lukezhan/data_master/LP6005322-DNA_C06.merged.sorted.chrI_raw.dedup-region_0264.bam
+#$ -l h_data=10G,h_rt=20:00:00
+. /u/home/l/lukezhan/SVPipeline/inputs.config 
+. /u/local/Modules/default/init/modules.sh
+module load python/2.7
+input=$input_single 
 outdir=/u/scratch/l/lukezhan/breakseqout/testing
 bwa=/u/local/apps/bwa/current/bwa
-samtools=/u/local/apps/samtools/current/samtools
-bplib=/u/home/l/lukezhan/SVPipeline/Breakseq/breakseq2_bplib_20150129.hg19/breakseq2_bplib_20150129.hg19.fna
-reference=/u/nobackup/eeskin2/adityago/luke_data/ref_genome/hg19/hg19.fa
-
+samtools=/u/local/apps/samtools/0.1.19/gcc-4.4.7/samtools
+bplib=/u/home/l/lukezhan/SVPipeline/Breakseq/bplib.hg38.gff
+reference=$ref_genome
 # Needs to provide reference genome
 ./breakseq2.sh ${input} ${outdir} ${reference} ${bwa} ${samtools} ${bplib}

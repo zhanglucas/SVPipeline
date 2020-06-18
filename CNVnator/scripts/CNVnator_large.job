@@ -9,19 +9,19 @@
 #$ -M zhanglucasjifeng@gmail.com
 #$ -l h_data=15G,h_rt=20:00:00
 
-
+. /u/home/l/lukezhan/SVPipeline/inputs.config
 # requires ROOT
 . /u/local/Modules/default/init/modules.sh
 module load cern_root
 
 # specify the variables
-used_bamfile=/u/nobackup/eeskin2/adityago/orginal_bam/LP6005322-DNA_B04.bam
+used_bamfile=$input_single
 binsize=500
 name=`echo $used_bamfile | sed -e 's/\/.*\///g' | sed 's/.dedup.realigned.recal.bam//g'`
 CNVnatorPrefix=/u/home/l/lukezhan/CNVnator_v0.4.1/src
 work_dir=$SCRATCH/CNVnator_large/$name
 rootfile=$work_dir/${name}.root
-hg19=/u/project/zarlab/jhsul/bin/reference/hg19.fasta
+hg19=$ref_genome
 
 # make directories
 mkdir -p $SCRATCH/CNVnator_large/

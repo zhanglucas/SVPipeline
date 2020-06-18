@@ -7,13 +7,14 @@
 #$ -j y
 #$ -m a
 #$ -M zhanglucasjifeng@gmail.com
-#$ -l h_data=4G,h_rt=10:00:00
+#$ -l h_data=20G,h_rt=10:00:00
 
 . /u/local/Modules/default/init/modules.sh
 module load python/2.7.13
+. /u/home/l/lukezhan/SVPipeline/inputs.config
 
-python /u/home/l/lukezhan/manta-1.5.1.centos6_x86_64/bin/configManta.py --bam=/u/home/l/lukezhan/bams/LP6005322-DNA_B04.bam --referenceFasta=/u/home/l/lukezhan/data_master/ref_genome/hg19/hg19.fa --runDir=/u/scratch/l/lukezhan/mantaout 
+python /u/home/l/lukezhan/manta-1.5.1.centos6_x86_64/bin/configManta.py --bam=$input_single --referenceFasta=$ref_genome --runDir=/u/scratch/l/lukezhan/mantaout/$JOB_ID 
 
-python /u/scratch/l/lukezhan/mantaout/runWorkflow.py -m local 
+python /u/scratch/l/lukezhan/mantaout/$JOB_ID/runWorkflow.py -m local 
 
  

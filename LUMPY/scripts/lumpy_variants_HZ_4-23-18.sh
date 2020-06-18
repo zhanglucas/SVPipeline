@@ -8,10 +8,10 @@
 #$ -m a
 #$ -M zhanglucasjifeng@gmail.com
 #$ -l h_data=15G,h_rt=20:00:00
-
+. /u/home/l/lukezhan/SVPipeline/inputs.config
 # To resubmit the failed lumpy jobs. Raises the h_data to 4G.
 # path to file with bam_id's
-BAMs_to_PROCESS=/u/nobackup/eeskin2/adityago/orginal_bam/LP6005322-DNA_B04.bam
+BAMs_to_PROCESS=$input_single
 
 # get the number of lines in txt file
 number_bam=1
@@ -24,7 +24,7 @@ scratch=/u/scratch/l/lukezhan
 list=(115 123 223 386)
 let number=$SGE_TASK_ID-1
 l=${list[$number]}
-sample_path_bam=/u/nobackup/eeskin2/adityago/orginal_bam/LP6005322-DNA_B04.bam
+sample_path_bam=$input_single
 sample_name=`echo $sample_path_bam | sed 's/\/.*\///g' | sed 's/.dedup.realigned.recal.bam//g' `
 
 echo $BAMs_to_PROCESS

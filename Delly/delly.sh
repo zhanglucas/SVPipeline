@@ -30,7 +30,7 @@ bcf=${outdir}/LP600.bcf
 vcf=${outdir}/${filename}.vcf
 
 # SV calling
-$dir/delly_v0.7.8_linux_x86_64bit call -g $reference -o $bcf $input
+$dir/delly_v0.7.8_linux_x86_64bit call -n -g $reference -o $bcf $input
 
 # Convert the binary files to vcf files, bcftool required
 

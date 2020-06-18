@@ -12,11 +12,11 @@
 . /u/local/Modules/default/init/modules.sh
 module load python/2.7.13 
 
-python /u/home/l/lukezhan/SVPipeline/FusorSV/FusorSV/FusorSV.py \
- -L DEFAULT \
- -r /u/home/l/lukezhan/data_master/ref_genome/grch37/human_g1k_v37.fasta \
- -i /u/home/l/lukezhan/meta_caller_RC1/ \
- -p 4 \
+python /u/home/l/lukezhan/FusorSV/FusorSV.py \
+ -r /u/home/l/lukezhan/refgenome/hg19.fasta \
+ -i /u/home/l/lukezhan/meta_caller_RC1/HG00096 \
+ -a /u/home/l/lukezhan/FusorSV/data/human_g1k_v37_decoy_ucsc_segmental_dups.json \
  -o /u/scratch/l/lukezhan/FusorOut \
+ -f /u/home/l/lukezhan/FusorSV/data/models/default.pickle \
+ -p 4 \
  -z /u/home/l/lukezhan/FusorSV/data/human_g1k_v37_decoy_coordinates.json \
- 

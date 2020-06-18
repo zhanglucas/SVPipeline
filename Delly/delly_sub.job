@@ -7,11 +7,13 @@
 #$ -j y
 #$ -m a
 #$ -M zhanglucasjifeng@gmail.com
-#$ -l h_data=4G,h_rt=20:00:00
+#$ -l h_data=10G,h_rt=20:00:00
 
-input=/u/home/l/lukezhan/data_master/LP6005322-DNA_C06.merged.sorted.chrI_raw.dedup-region_0264.bam
+. /u/home/l/lukezhan/SVPipeline/inputs.config
+input=$input_single
 outdir=/u/scratch/l/lukezhan/dellyout
-reference=/u/nobackup/eeskin2/adityago/luke_data/ref_genome/hg19/hg19.fa
-
+reference=$ref_genome
+echo $input
+echo $reference
 # Needs to provide reference genome
 bash delly.sh ${input} ${outdir} ${reference}
