@@ -1,0 +1,15 @@
+#!/bin/bash
+#$ -V
+#$ -S /bin/bash
+#$ -N cramtobamarray
+#$ -cwd
+#$ -o /u/home/l/lukezhan/joblogs/cramtobam
+#$ -j y
+#$ -t 1-10:1
+#$ -l h_vmem=10G,h_rt=20:00:00
+
+index=${SGE_TASK_ID}p
+input=$(sed -n $index /u/home/l/lukezhan/SVPipeline/PrePipeline/crams.list)
+
+
+bash cramtobam.sh ${input} 
