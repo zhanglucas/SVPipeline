@@ -13,11 +13,11 @@ module load samtools
 
 # SV_DIR is the installation directory for SVToolkit - it must be an exported environment variable.
 # runDir is where all the output files go
-export SV_DIR="/u/home/l/lukezhan/svtoolkit/"
-runDir=/u/scratch/l/lukezhan/genomeout/$out_root
-
+export SV_DIR=/u/home/l/lukezhan/genomstrip1.0/svtoolkit/
+runDir=/u/scratch/l/lukezhan/genomeout/
+echo $SV_DIR
 # SV_TMPDIR is a directory for writing temp files, which may be large if you have a large data set. Here the SV_TMPDIR is set in the run directory
-SV_TMPDIR=/u/scratch/l/lukezhan/genomeout/$out_root/tmpdir
+SV_TMPDIR=/u/scratch/l/lukezhan/genomeout/tmpdir
 
 # These executables must be on your path.
 which java > /dev/null || exit 1
@@ -50,7 +50,7 @@ java -cp ${classpath} ${mx} \
     -cp ${classpath} \
     -configFile ${SV_DIR}/conf/genstrip_parameters.txt \
     -tempDir ${SV_TMPDIR} \
-    -R /u/nobackup/eeskin2/jhsul/share/forLuke/jsul/GRCh38_full_analysis_set_plus_decoy_hla.fa \
+    -R /u/home/l/lukezhan/refgenome/GRCh38_full_analysis_set_plus_decoy_hla.fa \
     -runDirectory ${runDir} \
     -md ${runDir}/metadata \
     -disableGATKTraversal \
